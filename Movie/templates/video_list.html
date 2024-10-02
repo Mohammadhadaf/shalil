@@ -1,0 +1,20 @@
+
+{% extends 'base.html' %}
+{% block title %}
+آپلود
+{% endblock %}
+    {% block content %}
+    <div class="text-center">
+        <h1>لیست فیلم ها</h1>
+
+    </div>
+    <br>
+    <ul>
+        {% for video in videos %}
+            <li>
+                <a  class="btn btn-primary" href="{% url 'play_video' video %}">{{ video }}</a>
+            </li>
+        <br>
+        {% endfor %}
+    </ul>
+    {% endblock %}
